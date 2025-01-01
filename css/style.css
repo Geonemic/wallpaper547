@@ -12,10 +12,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Alegreya', serif; /* Apply Alegreya font everywhere */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Alegreya', serif; /* Apply Alegreya font to body */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,7 +353,32 @@ button:-webkit-details-marker {
     }
 
     .button-container {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 10px;
+    }
+
+    /* Зміна порядку елементів і створення колонок для мобільних пристроїв */
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-description {
+        order: -1; /* Move the description above the download button */
+    }
+
+    .download-column, .categories-column {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .categories-column {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .download-btn {
