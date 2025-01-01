@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Image</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo/logo.png" alt="Logo" class="site-logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-btn">Search</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="image-container">
+            <img id="largeImage" src="" alt="Large Image">
+        </div>
+        <div class="button-container">
+            <button id="downloadBtn" class="download-btn">Download</button>
+            <div class="image-categories" id="categories">
+                <!-- Categories will be loaded here -->
+            </div>
+            <div class="image-description" id="imageDescription">
+                <!-- Description will be loaded here -->
+            </div>
+        </div>
+    </div>
+    <script src="js/viewimage.js"></script>
+</body>
+</html>

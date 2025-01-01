@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo/logo.png" alt="Logo" class="site-logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input" id="searchInput">
+            <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <div class="categories">
+        <button data-category="all" class="active">All</button>
+        <button data-category="nature">Nature</button>
+        <button data-category="animals">Animals</button>
+        <button data-category="architecture">Architecture</button>
+    </div>
+
+    <div class="randomize-container">
+        <button id="randomizeBtn" class="randomize-btn">Randomize</button>
+    </div>
+
+    <div class="gallery">
+        <div id="gallery-column-1" class="gallery-column"></div>
+        <div id="gallery-column-2" class="gallery-column"></div>
+        <div id="gallery-column-3" class="gallery-column"></div>
+    </div>
+
+    <div class="load-more-container">
+        <button id="loadMoreBtn">Load More</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

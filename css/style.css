@@ -1,0 +1,432 @@
+/* Add styles for the new class .image-description */
+.image-description {
+    margin-top: 10px;
+    font-size: 18px; /* Increased font size */
+    color: #333;
+    text-align: left; /* Align text to the left */
+    max-width: 800px;
+}
+
+/* Existing styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.site-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #cfc4c4, #cfc4c4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px; /* Set a fixed height for the header */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ensure the logo container takes the full height of the header */
+}
+
+.site-logo {
+    height: 40px; /* Make the logo take the full height of the logo container */
+    width: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+    margin-top: 80px; /* Adjusted to leave space for the header */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Decrease size of category buttons by 20% */
+.categories button {
+    padding: 9.6px 19.2px; /* Reduced padding by 20% */
+    font-size: 14.4px; /* Reduced font size by 20% */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.categories button:hover {
+    background-color: #0056b3;
+}
+
+.categories button.active {
+    background-color: #0056b3;
+}
+
+/* Decrease size of randomize button by 20% */
+.randomize-container {
+    margin-bottom: 20px;
+}
+
+.randomize-btn {
+    padding: 8px 16px; /* Reduced padding by 20% */
+    font-size: 12.8px; /* Reduced font size by 20% */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.randomize-btn:hover {
+    background-color: #218838;
+}
+
+/* Встановлюємо контейнер для галереї як флекс-контейнер з трьома колонками */
+.gallery {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+/* From Uiverse.io by e-coders */
+button {
+    appearance: none;
+    background-color: #fafbfc;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow:
+        rgba(27, 31, 35, 0.04) 0 1px 0,
+        rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292e;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+button:hover {
+    background-color: #f3f4f6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+button:disabled {
+    background-color: #fafbfc;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959da5;
+    cursor: default;
+}
+
+button:active {
+    background-color: #edeff2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+}
+
+button:focus {
+    outline: 1px transparent;
+}
+
+button:before {
+    display: none;
+}
+
+button:-webkit-details-marker {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 80px; /* Adjusted to leave space for the header */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden; /* Ensure the image container does not overflow */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 90vh; /* Ensure image does not exceed viewport height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.download-btn {
+    padding: 20px 40px; /* Increased padding */
+    font-size: 24px; /* Increased font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+.download-btn:disabled {
+    background-color: #fafbfc;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959da5;
+    cursor: default;
+}
+
+.download-btn:active {
+    background-color: #edeff2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+}
+
+.download-btn:focus {
+    outline: 1px transparent;
+}
+
+.download-btn:before {
+    display: none;
+}
+
+.download-btn:-webkit-details-marker {
+    display: none;
+}
+
+.image-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px; /* Added margin to bring categories closer to the button */
+}
+
+.image-categories .category {
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 16px; /* Reduced font size */
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .image-container {
+        flex: 2;
+        margin-right: 20px; /* Space between image and button container */
+    }
+
+    .button-container {
+        flex: 1;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-column {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .button-container {
+        align-items: center;
+    }
+
+    .download-btn {
+        padding: 15px 30px; /* Adjusted padding */
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    .image-categories {
+        justify-content: center;
+    }
+
+    .image-categories .category {
+        padding: 8px 16px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    /* Зменшення розмірів поля для пошуку та кнопки на мобільних пристроях */
+    .search-container {
+        flex-direction: row; /* В рядок для оптимального використання простору */
+        gap: 8px; /* Зменшення відступів між елементами */
+        justify-content: center; /* Центрування елементів */
+    }
+
+    .search-input {
+        width: 70%; /* Зменшення ширини для коректного відображення */
+        padding: 6px; /* Зменшення відступів */
+        font-size: 12px; /* Зменшення розміру шрифта */
+        border-radius: 5px;
+    }
+
+    .search-btn {
+        width: 30%; /* Обмеження ширини кнопки */
+        padding: 6px; /* Зменшення внутрішніх відступів */
+        font-size: 12px; /* Зменшення шрифта */
+        border-radius: 5px;
+    }
+
+    .image-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-categories .category {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .search-input {
+        width: calc(100% - 20px);
+        font-size: 12px; /* Зменшення розміру шрифта */
+        padding: 6px; /* Зменшення внутрішніх відступів */
+    }
+
+    .search-btn {
+        width: calc(100% - 20px);
+        font-size: 12px; /* Зменшення шрифта */
+        padding: 6px; /* Зменшення внутрішніх відступів */
+    }
+
+    .image-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-categories .category {
+        width: 100%;
+        text-align: center;
+    }
+}
